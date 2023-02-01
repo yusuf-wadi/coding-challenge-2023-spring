@@ -200,25 +200,6 @@ print("Accuracy:", score)
 
     ValueError                                Traceback (most recent call last)
 
-    File c:\Users\thewa\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\neighbors\_classification.py:207, in KNeighborsClassifier.fit(self, X, y)
-        188 """Fit the k-nearest neighbors classifier from the training dataset.
-        189 
-        190 Parameters
-       (...)
-        203     The fitted k-nearest neighbors classifier.
-        204 """
-        205 self.weights = _check_weights(self.weights)
-    --> 207 return self._fit(X, y)
-
-
-    File c:\Users\thewa\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\neighbors\_base.py:429, in NeighborsBase._fit(self, X, y)
-        426 else:
-        427     self.outputs_2d_ = True
-    --> 429 check_classification_targets(y)
-        430 self.classes_ = []
-        431 self._y = np.empty(y.shape, dtype=int)
-
-
     File c:\Users\thewa\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\multiclass.py:200, in check_classification_targets(y)
         192 y_type = type_of_target(y, input_name="y")
         193 if y_type not in [
