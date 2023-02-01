@@ -1,13 +1,13 @@
 # Hello ACM
 
 
-This will be a notebook where I explore a data set with multiple algorithms and see what observations can be made
+This will be a notebook where I explore a data set with multiple algorithms and see what observations can be made. Let's start with KNearestNeighbors.
 
 ## Neighboring Stars
 
 ### K-Nearest Neighbors
 
-This algorithm takes data points and attempts to classify them against an x and y based on its nearest neighbors. Changing K changes the amount of neighbors tested. The neighbor with the highest count is decided to be the group that the data point belongs to. 
+This algorithm takes data points and attempts to classify them against an x and y based on its nearest neighbors. Changing K changes the amount of neighbors tested. The neighbor with the highest count is decided to be the group that the data point belongs to. So if we say that a star belongs to one of several classes, by training a model to detect features to decide where a star belongs, we can take novel stars and accurately classify them.
 
 
 
