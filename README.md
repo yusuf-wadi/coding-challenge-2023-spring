@@ -200,14 +200,6 @@ print("Accuracy:", score)
 
     ValueError                                Traceback (most recent call last)
 
-    c:\Users\thewa\Desktop\projects\computational_neuroscience\AI_ML\kaggle\stars\star_shopping.ipynb Cell 24 in <cell line: 3>()
-          <a href='vscode-notebook-cell:/c%3A/Users/thewa/Desktop/projects/computational_neuroscience/AI_ML/kaggle/stars/star_shopping.ipynb#X33sZmlsZQ%3D%3D?line=0'>1</a> # Train the model
-          <a href='vscode-notebook-cell:/c%3A/Users/thewa/Desktop/projects/computational_neuroscience/AI_ML/kaggle/stars/star_shopping.ipynb#X33sZmlsZQ%3D%3D?line=1'>2</a> knn = KNeighborsClassifier(n_neighbors=5)
-    ----> <a href='vscode-notebook-cell:/c%3A/Users/thewa/Desktop/projects/computational_neuroscience/AI_ML/kaggle/stars/star_shopping.ipynb#X33sZmlsZQ%3D%3D?line=2'>3</a> knn.fit(X_train, y_train)
-          <a href='vscode-notebook-cell:/c%3A/Users/thewa/Desktop/projects/computational_neuroscience/AI_ML/kaggle/stars/star_shopping.ipynb#X33sZmlsZQ%3D%3D?line=4'>5</a> # Test the model
-          <a href='vscode-notebook-cell:/c%3A/Users/thewa/Desktop/projects/computational_neuroscience/AI_ML/kaggle/stars/star_shopping.ipynb#X33sZmlsZQ%3D%3D?line=5'>6</a> y_pred = knn.predict(X_test)
-
-
     File c:\Users\thewa\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\neighbors\_classification.py:207, in KNeighborsClassifier.fit(self, X, y)
         188 """Fit the k-nearest neighbors classifier from the training dataset.
         189 
