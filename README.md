@@ -39,10 +39,12 @@ data['Star color'] = le.fit_transform(data['Star color'])
 data['Spectral Class'] = le.fit_transform(data['Spectral Class'])
 ```
 
+### Deciding the Y. In this case we will be isolating color
+
 
 ```python
-X = data.drop(['Spectral Class'], axis=1)
-y = data['Spectral Class']  
+X = data.drop(['Star color'], axis=1)
+y = data['Star color']  
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
 
@@ -71,7 +73,7 @@ plt.show()
 ```
 
 
-![png](star_shopping_files/star_shopping_12_0.png)
+![png](star_shopping_files/star_shopping_13_0.png)
 
 
 #### Graphing against spectral class
@@ -92,7 +94,7 @@ plt.show()
 ```
 
 
-![png](star_shopping_files/star_shopping_14_0.png)
+![png](star_shopping_files/star_shopping_15_0.png)
 
 
 #### Graphing against temperture
@@ -112,7 +114,7 @@ plt.show()
 ```
 
 
-![png](star_shopping_files/star_shopping_16_0.png)
+![png](star_shopping_files/star_shopping_17_0.png)
 
 
 ### Now train, test, and evaluate
@@ -121,7 +123,7 @@ plt.show()
 
 ```python
 # Train the model
-knn = KNeighborsClassifier(n_neighbors=1)
+knn = KNeighborsClassifier(n_neighbors=2)
 knn.fit(X_train, y_train)
 
 # Test the model
@@ -132,16 +134,16 @@ score = knn.score(X_test, y_test)
 print("Accuracy:", score)
 ```
 
-    Accuracy: 0.7708333333333334
+    Accuracy: 0.75
 
 
 ### Ok so..
 
-What does this mean? Well if we look back, we see that I am testing against spectral class. Spectral classes are discrete values, meaning they behave as steps and/or levels  
-rather than slopes or gradients. So as we can see, by using 1 neighbor, we have a fairly decent (for this case) accuracy of 77%.  
+What does this mean? Well if we look back, we see that I am testing against star color. In our case star colors are discrete values, meaning they behave as steps and/or levels  
+rather than slopes or gradients. So as we can see, by using 2 neighbor, we have a fairly decent (for this case) accuracy of 75%.  
 
 
-K-neighbors may not actually be the ideal algorithm for testing spectral classes, so let us look at a different feature.
+K-neighbors may not actually be the ideal algorithm for testing star color, so let us look at a different feature.
 
 
 ```python
@@ -261,7 +263,7 @@ print("Accuracy:", score)
 
 
 ### Now
-We have explored our neighboring stars and seen how the k-neighbors algorithm can help us traverse our data set. Let's press on, and see what else we can learn.
+We have explored our neighboring stars and seen how the k-neighbors algorithm can help us traverse our data set. We have seen how k-neighbors can be used to find the closest neighbors in a data set, and how the number of neighbors we choose affects the accuracy of the model. Finally, we have seen how to use k-neighbors to make predictions about a new data point. Let's press on, and see what else we can learn.
 
 ## Who's the Hottest Star?
 
@@ -345,7 +347,7 @@ plt.show()
 
 
 
-![png](star_shopping_files/star_shopping_34_1.png)
+![png](star_shopping_files/star_shopping_35_1.png)
 
 
 ## As we can see
@@ -409,6 +411,12 @@ clf.fit(X_train, y_train)
 ```
 
     [LibLinear]
+
+
+
+
+<style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression(solver=&#x27;liblinear&#x27;, verbose=True)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">LogisticRegression</label><div class="sk-toggleable__content"><pre>LogisticRegression(solver=&#x27;liblinear&#x27;, verbose=True)</pre></div></div></div></div></div>
+
 
 
 ### Predictions and Evaluations
@@ -497,7 +505,7 @@ print("F1-score:", f1)
 
 
 
-Now THIS is epic. I boosted the accuracy and precision, and we are well on our way to finding a new home! With more research and tweaking, I am certain that this could be pushed to near 100%
+Now THIS is epic. I boosted the accuracy, and we are well on our way to finding a new home! With more research and tweaking, I am certain that this could be pushed to near 100%
 
 ### **Further Study**:  
 - What other methods can be used to increase accuracy?  
