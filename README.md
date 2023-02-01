@@ -497,7 +497,7 @@ print("F1-score:", f1)
 
 
 
-Now THIS is epic. I boosted the accuracy, and we are well on our way to finding a new home! With more research and tweaking, I am certain that this could be pushed to near 100%
+Now THIS is epic. I boosted the accuracy and precision, and we are well on our way to finding a new home! With more research and tweaking, I am certain that this could be pushed to near 100%
 
 ### **Further Study**:  
 - What other methods can be used to increase accuracy?  
