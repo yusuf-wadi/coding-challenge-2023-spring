@@ -143,7 +143,7 @@ What does this mean? Well if we look back, we see that I am testing against star
 rather than slopes or gradients. So as we can see, by using 2 neighbor, we have a fairly decent (for this case) accuracy of 75%.  
 
 
-K-neighbors may not actually be the ideal algorithm for testing star color, so let us look at a different feature.
+Let us look at a different feature to test this classifier a bit more.
 
 
 ```python
@@ -326,14 +326,13 @@ plt.show()
 ## As we can see
 It appears that a star's temperature is of decisive importance in deciding its color. What an intriguing way to view the data! Let us press forward...
 
-## Star Shopping
+# Star Shopping
 
-Using what I have experimented with within the data and what I have discovered through my resources, I wonder if it is possible to predict the likelihood of a Goldilock Star  
-within a given data-set.  
-
+Using what I have experimented with within the data and what I have discovered through my resources, I wonder if it is possible to predict the likelihood of a Goldilock Star within a given data-set.
 
 This resource provided me with reliable information on what to look for: https://iopscience.iop.org/article/10.3847/2041-8213/ab0651/meta
 
+It mentions that the majority of goldilock stars are of the K class, so we wil be training a model to accurately predict the Spectral Class of a given star.
 
 ```python
 import pandas as pd
