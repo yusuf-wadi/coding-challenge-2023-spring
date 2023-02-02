@@ -75,6 +75,8 @@ plt.show()
 
 ![png](star_shopping_files/star_shopping_13_0.png)
 
+#### Observations
+There appears to be an anomaly in the earlier colors. Many stars of the same color and radius but varying widely in magnitude, interesting.
 
 #### Graphing against spectral class
 
@@ -96,6 +98,9 @@ plt.show()
 
 ![png](star_shopping_files/star_shopping_15_0.png)
 
+#### Observations
+
+The same anomaly appears again. I am assuming that those stars of that color also share the same spectral class.
 
 #### Graphing against temperture
 
