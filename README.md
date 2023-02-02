@@ -121,6 +121,9 @@ plt.show()
 
 ![png](star_shopping_files/star_shopping_17_0.png)
 
+#### Observations
+
+So those stars share the same class, color, and heat. Another observation that can be made is that as radius and temperature increase, magnitude appears to decrease.
 
 ### Now train, test, and evaluate
 
