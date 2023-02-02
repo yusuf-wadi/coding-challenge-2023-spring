@@ -377,8 +377,8 @@ y = df['Spectral Class']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, )
 ```
 
-### Building the model (Logical Regression)
-
+### Building the model (Logistic Regression)
+Why Logistic Regression? The difference lies in whether we are looking to classify discrete data or continuous data. As spectral class exists in discrete types, we will be using an optimized Logistic Regression model and not something more common such as a Linear Regression model
 
 ```python
 clf = LogisticRegression(solver="liblinear", max_iter=100, verbose=True)
@@ -411,7 +411,7 @@ print("F1-score:", f1)
     F1-score: 0.9279673814557535
 
 
-#### Boosting Accuracy using Grid Search Optimization and Random Forest feature identifiers
+#### Boosting Accuracy with Pipelines
 
 ---
 
