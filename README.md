@@ -151,7 +151,7 @@ What does this mean? Well if we look back, we see that I am testing against star
 rather than slopes or gradients. So as we can see, by using 2 neighbor, we have a fairly decent (for this case) accuracy of 75%.  
 
 
-K-neighbors may not actually be the ideal algorithm for testing star color, so let us look at a different feature.
+Let us look at a different feature to test this classifier a bit more.
 
 
 ```python
